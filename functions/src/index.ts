@@ -2,8 +2,7 @@ import {onRequest} from "firebase-functions/v2/https";
 import * as admin from 'firebase-admin';
 import * as logger from "firebase-functions/logger";
 import {onDocumentCreated, onDocumentDeleted, onDocumentUpdated, onDocumentWritten} from "firebase-functions/v2/firestore";
-
-const functions = require('firebase-functions');
+import * as functions from 'firebase-functions';
 
 
 
@@ -170,3 +169,4 @@ export const sendUserDeletionNotification = functions.auth.user().onDelete(async
         console.error('Error sending user deletion notification:', error);
     }
 });
+
